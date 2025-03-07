@@ -1,0 +1,237 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --teal: #31e2f3;
+    --light-teal: #83C5BE;
+    --light-cyan: #EDF6F9;
+    --salmon: #E29578;
+    --peach: #FFDDD2;
+    --dark-text: #201f1f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Add padding-top to offset the header */
+#home, #team, #collabs, #contact {
+    padding-top: 70px; /* Adjust this value as per the header's height */
+}
+
+
+body {
+    background: var(--light-cyan);
+    color: var(--dark-text);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0px;
+}
+.container h2 {
+    padding-bottom: 20px;
+    font-size: 50px;
+
+}
+
+/* Header */
+header {
+    background: #091b3b;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    width: 150px;
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0px 30px;
+    font-size: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: rgb(223, 137, 90);
+}
+
+/* Hero Section */
+.hero {
+    background: var(--light-teal) url('assets/logo/Background2.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px 10px 20px;
+    margin-top: 60px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: white; /* Make sure the text is visible over the background */
+}
+
+.hero p {
+    color: white; /* Set the text color to white */
+    text-align: left; /* Align the text to the left */
+    max-width: 50%; /* Limit the width of the text block to start from the left and end in the middle */
+    margin: 0 auto; /* Center the block horizontally */
+}
+
+.btn {
+    display: inline-block;
+    background: rgb(223, 137, 90);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+
+/* Sections */
+.section {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#home p {
+    padding-top: 20px;
+}
+
+#home a {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Updated CSS for Team Section */
+.team-grid {
+    display: flex;
+    flex-direction: column;  /* Align items vertically */
+    gap: 20px;  /* Add space between team members */
+    text-align: center;
+}
+
+.team-member {
+    background: rgb(223, 137, 90);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+
+/* Updated CSS for Collaboration Section with a new background color */
+.collab-item {
+    display: flex;  /* Use flexbox to align the image and text side by side */
+    justify-content: flex-start;  /* Align content to the left */
+    align-items: center;  /* Vertically align items */
+    margin-bottom: 50px;  /* Increased space between each project item */
+    flex-direction: row-reverse; /* Swap the image and text, image will be on the left */
+    background: rgb(223, 137, 90);  /* New background color (light peach) */
+    padding: 20px;
+    border-radius: 10px;  /* Optional: rounded corners for a cleaner look */
+}
+
+/* Image Styling */
+.collab-item img {
+    max-width: 400px;  /* Increase the size of the image */
+    max-height: 400px; /* Increase the size of the image */
+    object-fit: cover;  /* Ensures the image is cropped to cover the area */
+    border-radius: 10px;  /* Optional: rounded corners for a cleaner look */
+    margin-left: 50px;
+    padding-right: 70px;
+}
+
+/* Project Info */
+.project-info {
+    text-align: left;  /* Align text to the left */
+    max-width: 700px;  /* Increase the width of the project description */
+}
+
+/* Project Title */
+.project-info h3 {
+    font-size: 2rem;  /* Make the title larger */
+    margin-bottom: 15px;  /* Add more space below the title */
+}
+
+/* Project Description */
+.project-info p {
+    font-size: 1.2rem;  /* Increase the size of the description text */
+    margin-bottom: 15px;  /* Add more space between paragraphs */
+}
+
+/* Contact Form */
+.contact-box {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.contact-box a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Footer */
+footer {
+    background: var(--teal);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+
